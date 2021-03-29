@@ -1,0 +1,18 @@
+def vowel_replacer(phrase):
+    """
+    input: A phrase
+    output: The same phrase, but the vowels are replaced with the letter 'g'
+    """
+    
+    new_word = ""
+    for letter in phrase:
+        if letter.lower() in "aeiou":
+            if letter.isupper():
+                new_word += "G"
+            else:
+                new_word += "g"
+        else:
+            new_word += letter
+    return new_word
+
+print(vowel_replacer(input("Enter a phrase: ")))
